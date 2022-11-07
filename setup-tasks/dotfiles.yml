@@ -1,0 +1,23 @@
+  - name: Clone .dotfiles Into Bare Repo On HOME Directroy
+    ansible.builtin.git:
+      bare: yes
+      repo: 'https://github.com/adriankuklinski/.dotfiles'
+      dest: "$HOME/.cfg"
+    tags:
+    - dotfiles
+  - name: Create Git Config Alias
+    shell: echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc
+    tags:
+    - dotfiles
+  - name: Set Config .gitignore
+    ansible.builtin.lineinfile:
+      path: "$HOME/.gitignore"
+      state: present
+      line: ".cfg"
+      create: yes
+    tags:
+    - dotfiles
+  - name: Source .bashrc & Checkout Config 
+    shell: '/bin/bash -i -c "config checkout && config config --local status.showUntrackedFiles no"'
+    tags:
+    - dotfiles

@@ -8,4 +8,6 @@
       - zsh
   tasks:  
   - include: setup-tasks/zsh.yml
+  - include: setup-tasks/dotfiles.yml
   - include: setup-tasks/node.yml
+  
