@@ -1,4 +1,3 @@
-
   - name: Install ZSH Shell
     apt: name=zsh
     tags:
