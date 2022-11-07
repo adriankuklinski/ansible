@@ -6,6 +6,8 @@
         update_cache: true
       tags:
       - zsh
+      - dotfiles
+      - node
   tasks:  
   - include: setup-tasks/zsh.yml
   - include: setup-tasks/dotfiles.yml
