@@ -1,11 +1,10 @@
-name: cosmos
+name: ansible
 region: nyc
 services:
   - name: ansible
-    # GitHub source configuration
     github:
       branch: master
-      repo: YOUR_USERNAME/Ansible
+      repo: adriankuklinski/ansible
       deploy_on_push: true
     source_dir: /
     dockerfile_path: infrastructure/Dockerfile
@@ -27,5 +26,4 @@ services:
         scope: RUN_AND_BUILD_TIME
         value: ${blackhole.DATABASE_URL}
 
-# Database is shared with Spaceport and connects to the existing PostgreSQL instance
 database_ref: blackhole
