@@ -2,14 +2,13 @@ name: cosmos
 region: nyc
 services:
   - name: ansible
-    # Either specify GitHub source
+    # GitHub source configuration
+    github:
+      branch: master
+      repo: YOUR_USERNAME/Ansible
+      deploy_on_push: true
     source_dir: /
     dockerfile_path: infrastructure/Dockerfile
-    # Or specify a prebuilt image (if using GitHub Actions to build)
-    # image:
-    #   registry_type: DOCR
-    #   repository: cosmos/ansible
-    #   tag: latest
     http_port: 8080
     instance_count: 1
     instance_size_slug: basic-xxs
@@ -24,6 +23,9 @@ services:
         value: Production
       - key: ANSIBLE_ApplicationSettings__RequireHttps
         value: "false"
+      - key: ANSIBLE_ConnectionStrings__DefaultConnection
+        scope: RUN_AND_BUILD_TIME
+        value: ${blackhole.DATABASE_URL}
 
 # Database is shared with Spaceport and connects to the existing PostgreSQL instance
 database_ref: blackhole
