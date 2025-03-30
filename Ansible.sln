@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E9B6B8CB-14E4-43BB-8AC5-3520B8C6D0EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.Domain", "src\Ansible.Domain\Ansible.Domain.csproj", "{1DB4CB52-A32B-4250-9D01-5C9DDD95333E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.Infrastructure", "src\Ansible.Infrastructure\Ansible.Infrastructure.csproj", "{34930769-5640-4C55-A912-0C9A14FC81CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.API", "src\Ansible.API\Ansible.API.csproj", "{3279BC84-91C6-4731-AC7B-836E6EC88AB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.Host", "src\Ansible.Host\Ansible.Host.csproj", "{C15A0498-46A1-4945-9EBE-765C4C67B53D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{FD9660D6-5456-4220-BBAD-7D0013A4C987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.UnitTests", "tests\Ansible.UnitTests\Ansible.UnitTests.csproj", "{5604E6A2-DD6D-4256-8560-359321B9854A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ansible.IntegrationTests", "tests\Ansible.IntegrationTests\Ansible.IntegrationTests.csproj", "{EE6AE854-56A8-4B6B-AD6A-54E434DD00BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1DB4CB52-A32B-4250-9D01-5C9DDD95333E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB4CB52-A32B-4250-9D01-5C9DDD95333E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB4CB52-A32B-4250-9D01-5C9DDD95333E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB4CB52-A32B-4250-9D01-5C9DDD95333E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34930769-5640-4C55-A912-0C9A14FC81CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34930769-5640-4C55-A912-0C9A14FC81CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34930769-5640-4C55-A912-0C9A14FC81CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34930769-5640-4C55-A912-0C9A14FC81CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3279BC84-91C6-4731-AC7B-836E6EC88AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3279BC84-91C6-4731-AC7B-836E6EC88AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3279BC84-91C6-4731-AC7B-836E6EC88AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3279BC84-91C6-4731-AC7B-836E6EC88AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C15A0498-46A1-4945-9EBE-765C4C67B53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C15A0498-46A1-4945-9EBE-765C4C67B53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C15A0498-46A1-4945-9EBE-765C4C67B53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C15A0498-46A1-4945-9EBE-765C4C67B53D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5604E6A2-DD6D-4256-8560-359321B9854A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5604E6A2-DD6D-4256-8560-359321B9854A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5604E6A2-DD6D-4256-8560-359321B9854A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5604E6A2-DD6D-4256-8560-359321B9854A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE6AE854-56A8-4B6B-AD6A-54E434DD00BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6AE854-56A8-4B6B-AD6A-54E434DD00BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6AE854-56A8-4B6B-AD6A-54E434DD00BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6AE854-56A8-4B6B-AD6A-54E434DD00BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1DB4CB52-A32B-4250-9D01-5C9DDD95333E} = {E9B6B8CB-14E4-43BB-8AC5-3520B8C6D0EC}
+		{34930769-5640-4C55-A912-0C9A14FC81CC} = {E9B6B8CB-14E4-43BB-8AC5-3520B8C6D0EC}
+		{3279BC84-91C6-4731-AC7B-836E6EC88AB0} = {E9B6B8CB-14E4-43BB-8AC5-3520B8C6D0EC}
+		{C15A0498-46A1-4945-9EBE-765C4C67B53D} = {E9B6B8CB-14E4-43BB-8AC5-3520B8C6D0EC}
+		{5604E6A2-DD6D-4256-8560-359321B9854A} = {FD9660D6-5456-4220-BBAD-7D0013A4C987}
+		{EE6AE854-56A8-4B6B-AD6A-54E434DD00BB} = {FD9660D6-5456-4220-BBAD-7D0013A4C987}
+	EndGlobalSection
+EndGlobal

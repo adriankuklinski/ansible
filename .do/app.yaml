@@ -1,0 +1,29 @@
+name: cosmos
+region: nyc
+services:
+  - name: ansible
+    # Either specify GitHub source
+    source_dir: /
+    dockerfile_path: infrastructure/Dockerfile
+    # Or specify a prebuilt image (if using GitHub Actions to build)
+    # image:
+    #   registry_type: DOCR
+    #   repository: cosmos/ansible
+    #   tag: latest
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 10
+      period_seconds: 30
+    routes:
+      - path: /
+    envs:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ANSIBLE_ApplicationSettings__RequireHttps
+        value: "false"
+
+# Database is shared with Spaceport and connects to the existing PostgreSQL instance
+database_ref: blackhole

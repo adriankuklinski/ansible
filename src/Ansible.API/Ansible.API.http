@@ -1,0 +1,6 @@
+@Ansible.API_HostAddress = http://localhost:5040
+
+GET {{Ansible.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
