@@ -25,5 +25,3 @@ services:
       - key: ANSIBLE_ConnectionStrings__DefaultConnection
         scope: RUN_AND_BUILD_TIME
         value: ${blackhole.DATABASE_URL}
-
-database_ref: blackhole
