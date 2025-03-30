@@ -1,3 +1,4 @@
+using Ansible.API.Health;
 using Ansible.Domain.Interfaces;
 using Ansible.Infrastructure.Data;
 using Ansible.Infrastructure.Services;
@@ -45,7 +46,7 @@ public static class Startup
         
         // Add Health Checks
         builder.Services.AddHealthChecks()
-            .AddDbContextCheck<AnsibleDbContext>();
+            .AddCheck<DatabaseHealthCheck>("database");
         
         // Add Serilog
         builder.Host.UseSerilog((context, services, configuration) => configuration
